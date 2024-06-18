@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>路仔元宇宙世界上半場</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap&#34;  rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+        .loading-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            z-index: 1000;
+        }
+        .loading-screen .logo {
+            width: 300px; /* 保持原始大小 */
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .loading-screen .spinner {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .loading-screen .text {
+            color: #FF7F50; /* 珊瑚色文字 */
+            font-size: 24px; /* 根据需要调整字体大小 */
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .game-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .game-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-screen">
+        <img class="logo" src="https://i.postimg.cc/zGqH9hgD/bannerr0501-1-Photoroom-png-Photoroom.png&#34;  alt="Logo">
+        <div class="spinner"></div>
+        <div class="text">路仔即將帶你，進入元宇宙世界。(上半場)</div>
+    </div>
+    <div class="game-container">
+       <iframe src="https://www.spatial.io/embed/art-Chang-2-665569cb032da3b821310920?share=3199386550028228848&autoplay=1&enableRtc=1" width="1280px" height="720px" allow="camera; fullscreen; autoplay; display-capture; microphone; clipboard-write"></iframe>
+    </div>
+
+    <script>
+        // 等待15秒後隱藏進入畫面
+        setTimeout(function() {
+            document.querySelector('.loading-screen').style.display = 'none';
+        }, 25000);
+    </script>
+</body>
+</html> 
